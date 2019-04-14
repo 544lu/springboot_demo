@@ -1,5 +1,6 @@
 package com.lu.demo_1;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -7,9 +8,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.demo_1.entity.ConfigBean;
 
-@SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
+@SpringBootApplication(exclude = DataSourceAutoConfiguration.class,scanBasePackages={"com.demo_1"})
 @EnableConfigurationProperties({ConfigBean.class})
+@MapperScan("com.demo_1.dao")
 public class Demo1Application {
 
 	public static void main(String[] args) {

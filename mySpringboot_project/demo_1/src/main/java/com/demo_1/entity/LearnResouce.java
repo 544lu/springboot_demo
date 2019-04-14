@@ -1,9 +1,14 @@
 package com.demo_1.entity;
 
 public class LearnResouce {
-    private String author;
+	private int id;
+	private String author;
     private String title;
     private String url;
+    
+    public LearnResouce() {
+    	
+    }
     
     public LearnResouce(String author,String title,String url) {
     	this.author=author;
@@ -11,6 +16,14 @@ public class LearnResouce {
     	this.url=url;
     	}
 
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getAuthor() {
 		return author;
 	}

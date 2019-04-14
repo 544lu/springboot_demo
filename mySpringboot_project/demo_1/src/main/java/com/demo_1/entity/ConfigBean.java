@@ -1,4 +1,4 @@
-package com.lu.demo_1;
+package com.demo_1.entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
